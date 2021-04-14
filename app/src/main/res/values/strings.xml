@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name" translatable="false">tp-eseo-theophilem</string>
+    <string name="home_screen_text">hello world!</string>
+</resources>
