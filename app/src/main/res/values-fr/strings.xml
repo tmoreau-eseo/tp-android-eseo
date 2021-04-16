@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="home_screen_text">bonjour le monde !</string>
+    <string name="splash_screen_text">Moreau Théophile - ESEO A2</string>
+    <string name="btn_loc">localisation</string>
+    <string name="btn_hist">historique</string>
+    <string name="btn_param">paramètres</string>
 </resources>

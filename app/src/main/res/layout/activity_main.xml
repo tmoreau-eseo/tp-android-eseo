@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Main.MainActivity">
+    tools:context=".Main.MainActivity"
+    android:background="@color/black_home"
+    >
 
+    <ImageView
+        android:id="@+id/make_your_choise"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/make_your_choise"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!--
     <TextView
         android:id="@+id/home_screen_text"
         android:layout_width="wrap_content"
@@ -15,5 +29,39 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    -->
+
+    <Button
+        android:text="@string/btn_loc"
+        android:id="@+id/bouton_localisation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/make_your_choise"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/bouton_historique"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <Button
+        android:text="@string/btn_hist"
+        android:id="@+id/bouton_historique"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/make_your_choise"
+        app:layout_constraintLeft_toRightOf="@+id/bouton_localisation"
+        app:layout_constraintRight_toLeftOf="@+id/bouton_parametres"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
+
+    <Button
+        android:text="@string/btn_param"
+        android:id="@+id/bouton_parametres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/make_your_choise"
+        app:layout_constraintLeft_toRightOf="@id/bouton_historique"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
