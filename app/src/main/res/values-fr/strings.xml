@@ -5,4 +5,9 @@
     <string name="btn_loc">localisation</string>
     <string name="btn_hist">historique</string>
     <string name="btn_param">paramètres</string>
+    <string name="localisation">localisation</string>
+    <string name="textLocation1">"Vous vous cachez bien au : "</string>
+    <string name="defautLocationText1">Toi ta pas accepté les autorisations ...</string>
+    <string name="defautLocationText2">"Bon plus qu'à faire la distance ci dessous pour retourner travailler "</string>
+    <string name="defautLocationTextToEseo">Pas d\'autorisation, pas de distance jusqu\'à l\'ESEO Donc pas de diplôme  Donc chien pas content</string>
 </resources>
