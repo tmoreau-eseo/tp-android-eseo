@@ -1,5 +1,7 @@
-package com.example.tp_eseo_theophilem
+package com.example.tp_eseo_theophilem.ui.Map
 
+import com.example.tp_eseo_theophilem.ux.LocalPreferences
+import kotlin.String
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
@@ -15,6 +17,8 @@ import android.widget.Toast
 import android.widget.Toast.LENGTH_LONG
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
+import com.example.tp_eseo_theophilem.Main.MainActivity
+import com.example.tp_eseo_theophilem.R
 import java.util.*
 import kotlin.math.round
 
@@ -37,8 +41,15 @@ class MapsActivity : AppCompatActivity() {
             setDisplayShowHomeEnabled(true)
         }
 
+        try{
+            requestPermission();
 
-        requestPermission();
+        }catch (e: Exception){
+            val toast = Toast.makeText(applicationContext, R.string.permitionNotAcepted, LENGTH_LONG)
+            toast.show()
+            startActivity(Intent(this, MainActivity::class.java));
+        }
+
 //        val location = getLocation();
 //        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("geo:47.472822,-0.5621756")));
     }
@@ -84,6 +95,7 @@ class MapsActivity : AppCompatActivity() {
 
         if (results.isNotEmpty()) {
             locationText.text = results[0].getAddressLine(0);
+            val currentLocation = results[0].getAddressLine(0);
             var eseoLat = 47.49369227314271;
             var eseoLong = -0.5512572285386245;
             val locationEseo = Location("ESEO");
@@ -95,17 +107,26 @@ class MapsActivity : AppCompatActivity() {
             val lTET1 = R.string.messageDistance1;
             val lTET2 = distanceMetre.toString();
             val lTET3 = R.string.messageDistance2;
-            val locationToEseoText = "$lTET1 $lTET2 $lTET3"
-            locationToEseo.text = "  ";
+            val locationToEseoText = lTET1.toString() + lTET2 + lTET3.toString()
+            locationToEseo.text = locationToEseoText;
             val distanceKm = distanceMetre / 1000;
-            locationToEseoKm.text = "Ce qui donne $distanceKm kilomètres jusqu'à l'ESEO";
+            val tkm1 = R.string.messageKm1;
+            val tkm2 = R.string.messageKm2;
+            locationToEseoKm.text = tkm1.toString() + distanceKm.toString() + tkm2.toString();
+            //val date = Calendar.getInstance().time;
+            LocalPreferences.getInstance(this).addToHistory(currentLocation);
+//            """[
+//                {
+//                  "date": $date,
+//                  "address": $currentLocation
+//                }]"""
 
         }else
         {
-
             val toast = Toast.makeText(applicationContext, R.string.permitionNotAcepted, LENGTH_LONG)
             toast.show()
         }
     }
 }
+
 

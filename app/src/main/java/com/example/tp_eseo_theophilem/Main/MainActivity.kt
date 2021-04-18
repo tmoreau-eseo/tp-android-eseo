@@ -2,13 +2,12 @@ package com.example.tp_eseo_theophilem.Main
 
 import android.content.Context
 import android.content.Intent
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.Settings
 import android.widget.Button
-import com.example.tp_eseo_theophilem.MapsActivity
+import com.example.tp_eseo_theophilem.ui.Map.MapsActivity
 import com.example.tp_eseo_theophilem.R
+import com.example.tp_eseo_theophilem.SettingsActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,10 +28,12 @@ class MainActivity : AppCompatActivity() {
 
         // Bouton permettant l'accès aux paramètres des applications
         findViewById<Button>(R.id.bouton_parametres).setOnClickListener {
-            val targetIntentSettings = Intent().apply {
-                action = android.provider.Settings.ACTION_APPLICATION_SETTINGS;
-            }
-            startActivity(targetIntentSettings);
+            startActivity(Intent(this, SettingsActivity::class.java));
+
+//            val targetIntentSettings = Intent().apply {
+//                action = android.provider.Settings.ACTION_APPLICATION_SETTINGS;
+//            }
+//            startActivity(targetIntentSettings);
         }
     }
 
