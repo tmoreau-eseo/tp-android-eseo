@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tpeseotheophilem">
-        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".ui.Historique.HistoriqueActivity"></activity>
+        <activity android:name=".SettingsActivity" />
         <activity android:name=".ui.Map.MapsActivity" />
         <activity
             android:name=".ui.SplashScreen.SplashScreenActivity"
@@ -26,7 +27,7 @@
         </activity>
         <activity
             android:name=".Main.MainActivity"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
     </application>
 
 </manifest>

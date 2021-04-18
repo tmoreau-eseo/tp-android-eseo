@@ -29,11 +29,6 @@ class MainActivity : AppCompatActivity() {
         // Bouton permettant l'accès aux paramètres des applications
         findViewById<Button>(R.id.bouton_parametres).setOnClickListener {
             startActivity(Intent(this, SettingsActivity::class.java));
-
-//            val targetIntentSettings = Intent().apply {
-//                action = android.provider.Settings.ACTION_APPLICATION_SETTINGS;
-//            }
-//            startActivity(targetIntentSettings);
         }
     }
 
