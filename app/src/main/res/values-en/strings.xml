@@ -10,4 +10,9 @@
     <string name="defautLocationText1">You haven\'t accepted the authorizations ...</string>
     <string name="defautLocationText2">Good more than to do the distance below to return to work</string>
     <string name="defautLocationTextToEseo">No authorization, no distance to ESEO So no diploma So dog not happy</string>
+    <string name="messageDistance1">"You are at "</string>
+    <string name="distanceToEseoKm">"  "</string>
+    <string name="messageDistance2">meters from ESEO</string>
+    <string name="whatTheDogSay">when we realize that the application is working</string>
+    <string name="permitionNotAcepted">Veuillez retourner au menu d\'acceuil, cliquer sur paramètres, choisir l\'application et autorisez la localisation</string>
 </resources>
