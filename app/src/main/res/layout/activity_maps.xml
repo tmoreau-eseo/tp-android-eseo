@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MapsActivity"
+    tools:context=".ui.Map.MapsActivity"
     android:background="@color/white"
     >
 
@@ -43,6 +43,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/locationText"
+        android:gravity="center"
         android:textSize="20dp"
         android:textColor="@color/black"
         />
@@ -52,13 +53,37 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/defautLocationTextToEseo"
-        app:layout_constraintBottom_toTopOf="@+id/imagePug"
+        app:layout_constraintBottom_toTopOf="@+id/locationTextToEseoKm"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textLocation2"
         android:textSize="20dp"
         android:textColor="@color/black"
         />
+    <TextView
+        android:id="@+id/locationTextToEseoKm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/distanceToEseoKm"
+        app:layout_constraintBottom_toTopOf="@+id/imagePug"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationTextToEseo"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        />
+
+    <TextView
+        android:id="@+id/whatTheDogSays"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/whatTheDogSay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagePug"
+        app:layout_constraintVertical_bias="0.384"
+        android:textColor="@color/black"/>
 
     <ImageView
         android:id="@+id/imagePug"
@@ -69,7 +94,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textLocation2"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.754" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
