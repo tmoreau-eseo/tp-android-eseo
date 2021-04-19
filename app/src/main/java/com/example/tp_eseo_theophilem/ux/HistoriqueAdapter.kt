@@ -1,4 +1,4 @@
-package com.example.tp_eseo_theophilem.ui.Historique
+package com.example.tp_eseo_theophilem.ux
 
 import android.view.LayoutInflater
 import android.view.View
@@ -32,6 +32,5 @@ class HistoriqueAdapter(private val locList: Array<String>) : RecyclerView.Adapt
     override fun getItemCount(): Int {
         return locList.size
     }
-
 
 }

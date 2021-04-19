@@ -22,5 +22,6 @@
     <string name="bouton_settings_location">Paramètres de localisation</string>
     <string name="bouton_map_eseo">Carte sur l\'ESEO</string>
     <string name="bouton_site_eseo">Site de l\'ESEO</string>
-    <string name="bouton_mail">Mail au deéveloppeur</string>
+    <string name="bouton_mail">Mail au développeur</string>
+    <string name="item_list_empty">Value</string>
 </resources>

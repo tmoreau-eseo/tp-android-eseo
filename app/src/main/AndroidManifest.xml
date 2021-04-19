@@ -14,6 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tpeseotheophilem">
         <activity android:name=".ui.Historique.HistoriqueActivity"></activity>
+        <activity android:name=".ux.HistoriqueAdapter" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".ui.Map.MapsActivity" />
         <activity

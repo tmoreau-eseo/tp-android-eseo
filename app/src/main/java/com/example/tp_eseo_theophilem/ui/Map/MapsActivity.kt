@@ -125,15 +125,15 @@ class MapsActivity : AppCompatActivity() {
             var distance = location.distanceTo(locationEseo);
 
             val distanceMetre = round(distance)
-            val lTET1 = R.string.messageDistance1;
+            val lTET1: String = getString(R.string.messageDistance1);
             val lTET2 = distanceMetre.toString();
-            val lTET3 = R.string.messageDistance2;
-            val locationToEseoText = lTET1.toString() + lTET2 + lTET3.toString()
+            val lTET3 = getString(R.string.messageDistance2);
+            val locationToEseoText = lTET1 + lTET2 + lTET3
             locationToEseo.text = locationToEseoText;
             val distanceKm = distanceMetre / 1000;
-            val tkm1 = R.string.messageKm1;
-            val tkm2 = R.string.messageKm2;
-            locationToEseoKm.text = tkm1.toString() + distanceKm.toString() + tkm2.toString();
+            val tkm1 = getString(R.string.messageKm1);
+            val tkm2 = getString(R.string.messageKm2);
+            locationToEseoKm.text = tkm1 + distanceKm.toString() + tkm2;
             //val date = Calendar.getInstance().time;
             LocalPreferences.getInstance(this).addToHistory(currentLocation);
         }else

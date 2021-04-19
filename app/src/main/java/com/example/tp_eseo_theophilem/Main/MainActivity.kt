@@ -8,6 +8,7 @@ import android.widget.Button
 import com.example.tp_eseo_theophilem.ui.Map.MapsActivity
 import com.example.tp_eseo_theophilem.R
 import com.example.tp_eseo_theophilem.SettingsActivity
+import com.example.tp_eseo_theophilem.ux.HistoriqueAdapter
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,7 +24,8 @@ class MainActivity : AppCompatActivity() {
 
         // Bouton gérant l'historique des localisations
         findViewById<Button>(R.id.bouton_historique).setOnClickListener {
-            // Votre action
+
+            startActivity(Intent(this, HistoriqueAdapter::class.java));
         }
 
         // Bouton permettant l'accès aux paramètres des applications
