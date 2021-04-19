@@ -54,6 +54,27 @@ class MapsActivity : AppCompatActivity() {
 //        startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("geo:47.472822,-0.5621756")));
     }
 
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+
+        when (requestCode) {
+            PERMISSION_REQUEST_LOCATION -> {
+                // If request is cancelled, the result arrays are empty.
+                if ((grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED)) {
+                    // Permission obtenue, Nous continuons la suite de la logique.
+                    getLocation()
+                } else {
+                    val toast = Toast.makeText(applicationContext, R.string.permitionNotAcepted, LENGTH_LONG)
+                    toast.show()
+                    startActivity(Intent(this, MainActivity::class.java));
+                    // TODO
+                    // Permission non accepté, expliqué ici via une activité ou une dialog pourquoi nous avons besoin de la permission
+                }
+                return
+            }
+        }
+    }
+
     @SuppressLint("MissingPermission")
     private fun getLocation() {
         if (hasPermission()) {
@@ -115,18 +136,14 @@ class MapsActivity : AppCompatActivity() {
             locationToEseoKm.text = tkm1.toString() + distanceKm.toString() + tkm2.toString();
             //val date = Calendar.getInstance().time;
             LocalPreferences.getInstance(this).addToHistory(currentLocation);
-//            """[
-//                {
-//                  "date": $date,
-//                  "address": $currentLocation
-//                }]"""
-
         }else
         {
             val toast = Toast.makeText(applicationContext, R.string.permitionNotAcepted, LENGTH_LONG)
             toast.show()
         }
     }
+
+
 }
 
 
