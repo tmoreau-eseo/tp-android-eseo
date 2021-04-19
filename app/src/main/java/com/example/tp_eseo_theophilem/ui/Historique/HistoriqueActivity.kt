@@ -10,5 +10,5 @@ class HistoriqueActivity : AppCompatActivity() {
         setContentView(R.layout.activity_historique)
     }
 
-    
+
 }
